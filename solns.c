@@ -22,4 +22,10 @@ int min(int a[],int n)
    }
     return ret;
 }
-  
+/*average function*/
+float average( int a[],int n)
+{ float average=0;
+  for(int i=0;i<n;++i)
+    average+=a[i];
+    return average/n;
+} 
