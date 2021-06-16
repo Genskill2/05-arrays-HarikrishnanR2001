@@ -77,3 +77,41 @@ int mode(int a[],int n)
    return ret;
 }  
  
+/*factor function*/
+int factors(int n,int a[])
+{
+   int flag=0; 
+  while (n % 2 == 0)
+    {
+        a[flag]=2;
+        n = n/2;
+        flag+=1;
+    }
+    
+   
+     
+      for (int i = 3; i <= sqrt(n); i = i + 2)
+    {
+      
+        while (n % i == 0)
+        {
+            a[flag]=i;
+            n = n/i;
+            flag+=1;
+            
+        }
+    }
+     if(n>2)
+     {
+         flag+=1;
+         a[flag-1]=n;
+     }
+   
+   
+    
+        
+        
+      return flag;
+    
+}
+     
